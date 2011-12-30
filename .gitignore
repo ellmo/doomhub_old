@@ -4,4 +4,4 @@ log/*.log
 tmp/
 .sass-cache/
 *.sublime*
-*.sblp
+config/database.yml
