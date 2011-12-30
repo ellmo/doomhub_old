@@ -6,3 +6,15 @@
  *= require foundation
  *= require_tree . 
 */
+
+#absolute_top_menu{
+  position:fixed ;
+}
+
+#doomhub_img_homelink{
+  
+}
+
+#user_login_span{
+  float:left;
+}

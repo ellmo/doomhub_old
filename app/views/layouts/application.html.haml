@@ -6,7 +6,14 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    .user_menu
-      %span
-        = user_login_span_tag(current_user)
+    / #absolute_top_menu
+    /   #doomhub_img_homelink
+    /     = link_to image_tag("doomhub.com.png", :height => 20), root_path
+    /   %span#user_login_span
+    /     = user_login_span_tag(current_user)
+    %div{ :style => "background-color: red;" }
+      %div{ :style => "background-color: blue;" }
+      %div{ :style => "background-color: white;" }
+      %div{ :style => "background-color: green;" }
+      %div{ :style => "background-color: yellow;" }
     = yield
