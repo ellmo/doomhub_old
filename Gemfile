@@ -14,7 +14,7 @@ gem 'devise'
 gem 'cancan'
 
 group :assets do
-  gem 'sass-rails', "  ~> 3.1.0"
+  gem 'sass-rails', "~> 3.1.0"
   gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'
 end
@@ -22,7 +22,10 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
-  gem 'capybara'
+  gem 'capybara', '~> 1.1.2'
+  gem 'cucumber-rails', '~> 1.2.1'
+  gem 'minitest', '~> 2.10.0'
+  gem 'database_cleaner'
 end
 
 # Use unicorn as the web server
