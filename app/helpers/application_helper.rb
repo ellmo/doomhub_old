@@ -4,7 +4,7 @@ module ApplicationHelper
     str = "[ "
     if user
       str << "Hello, #{user.login}. | "
-      str << link_to("Log Out", logout_path)
+      str << link_to("Log out", logout_path)
       str << " ]"
     else
       str << link_to("Log in", login_path)

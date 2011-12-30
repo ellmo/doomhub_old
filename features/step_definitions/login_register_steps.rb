@@ -2,11 +2,7 @@
 #= GIVEN =
 #=========
 
-Given /^there are following users in database$/ do |table|
-  table.hashes.each do |hash|
-    Factory(:user, hash)
-  end
-end
+
 
 #========
 #= WHEN =

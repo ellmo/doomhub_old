@@ -1,15 +1,17 @@
-Feature: Login and Registration
+Feature: Log-in and Registration
 
-  Scenario: Widoczność formularza logowania
-    Given I am on page "root"
+  Scenario: Log-in form visibility
+    Given I am not logged in
+    And I am on page "root"
+    And I am not logged in
     And I see "Log in" link
     When I follow "Log in" link
     Then I end up on page "login"
     And I see login form
 
-  @wip
-  Scenario Outline: logowanie emailem LUB loginem
-    Given there are following users in database
+  Scenario Outline: Log-in with either email or login
+    Given I am not logged in
+    And there are following users in database
       | email               | login | password |
       | ellmunzai@gmail.com | ellmo | haslo123 |
     And I am on page "login"
@@ -24,3 +26,14 @@ Feature: Login and Registration
       | login_or_email      | pass     |
       | ellmo               | haslo123 |
       | ellmunzai@gmail.com | haslo123 |
+
+  Scenario: Log-out visibility
+    Given I am logged in
+    And I am on page "root"
+    Then I see "Log out" link
+  
+  Scenario: Log-out
+    Given I am logged in as "ellmo"
+    When I follow "Log out" link
+    Then I do not see "Log out" link
+    And I do not see text "Hello, ellmo."
