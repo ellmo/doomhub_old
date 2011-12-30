@@ -1,16 +1,15 @@
 Feature: Log-in and Registration
 
   Scenario: Log-in form visibility
-    Given I am not logged in
+    Given I am NOT logged in
     And I am on page "root"
-    And I am not logged in
     And I see "Log in" link
     When I follow "Log in" link
     Then I end up on page "login"
     And I see login form
 
   Scenario Outline: Log-in with either email or login
-    Given I am not logged in
+    Given I am NOT logged in
     And there are following users in database
       | email               | login | password |
       | ellmunzai@gmail.com | ellmo | haslo123 |
@@ -35,5 +34,5 @@ Feature: Log-in and Registration
   Scenario: Log-out
     Given I am logged in as "ellmo"
     When I follow "Log out" link
-    Then I do not see "Log out" link
-    And I do not see text "Hello, ellmo."
+    Then I do NOT see "Log out" link
+    And I do NOT see text "Hello, ellmo."

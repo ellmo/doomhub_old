@@ -2,7 +2,7 @@
 #= GIVEN =
 #=========
 
-Given /^I am not logged in$/ do
+Given /^I am NOT logged in$/ do
   visit logout_path
 end
 
@@ -62,10 +62,10 @@ Then /^I see text "(.+)"$/ do |text|
   page.should have_content(text)
 end
 
-Then /^I do not see text "(.+)"$/ do |text|
+Then /^I do NOT see text "(.+)"$/ do |text|
   page.should_not have_content(text)
 end
 
-Then /^I do not see "(.+)" link$/ do |link|
+Then /^I do NOT see "(.+)" link$/ do |link|
   page.should_not have_link(link)
 end
