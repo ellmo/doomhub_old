@@ -1,0 +1,15 @@
+s3_access_key_id: <%= ENV['S3_ACCESS_KEY_ID'] %>
+s3_secret_access_key: <%= ENV['S3_SECRET_KEY_ID'] %>
+
+s3_bucket: doomhub
+s3_upload_files:
+  - public/assets/foundation/**/*
+
+package_assets:   on
+embed_assets:     datauri
+compress_assets:  on
+gzip_assets:      off
+
+use_cloudfront: invalidate
+cloudfront_dist_id: E34D8ZIX7XPSS7
+cloudfront_domain: ddb16iga5rcj8.cloudfront.net

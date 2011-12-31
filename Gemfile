@@ -3,24 +3,25 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.0'
 
 gem 'jquery-rails'
-gem 'mysql2'
 
-
-gem 'zurb-foundation'
 gem 'simple_form'
 gem 'haml-rails'
 gem 'pry'
 gem 'devise'
 gem 'cancan'
 gem 'sass'
+gem 'jammit-s3'
+gem 's3'
 
 group :assets do
+  gem 'zurb-foundation'
   gem 'sass-rails', "~> 3.1.0"
   gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'
 end
 
 group :development, :test do
+  gem 'mysql2'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'capybara', '~> 1.1.2'
