@@ -12,6 +12,7 @@ gem 'haml-rails'
 gem 'pry'
 gem 'devise'
 gem 'cancan'
+gem 'sass'
 
 group :assets do
   gem 'sass-rails', "~> 3.1.0"
