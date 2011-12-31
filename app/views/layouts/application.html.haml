@@ -1,19 +1,23 @@
 !!!
 %html
   %head
-    %title Doomhub
+    %title Doomhub.com
     = stylesheet_link_tag    "application"
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    / #absolute_top_menu
-    /   #doomhub_img_homelink
-    /     = link_to image_tag("doomhub.com.png", :height => 20), root_path
-    /   %span#user_login_span
-    /     = user_login_span_tag(current_user)
-    %div{ :style => "background-color: red;" }
-      %div{ :style => "background-color: blue;" }
-      %div{ :style => "background-color: white;" }
-      %div{ :style => "background-color: green;" }
-      %div{ :style => "background-color: yellow;" }
-    = yield
+    .container#topmost
+      .row{ :style => "background-color: #222;"}
+        .three.columns
+          = user_login_span_tag(current_user)
+        .six.columns{ :style => "text-align: center;"}
+          = link_to "Go home", root_path
+        .three.columns
+      .row
+        = yield
+      .push
+    .container#footer
+      .row{ :style => "background-color: #222;"}
+        .twelve.columns#author
+          by ellmo 2011
+      
