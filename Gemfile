@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.0'
-
+gem 'mysql2'
 gem 'jquery-rails'
 
 gem 'simple_form'
@@ -12,6 +12,7 @@ gem 'cancan'
 gem 'sass'
 gem 'jammit-s3'
 gem 's3'
+gem 'therubyracer'
 
 group :assets do
   gem 'zurb-foundation'
@@ -21,7 +22,6 @@ group :assets do
 end
 
 group :development, :test do
-  gem 'mysql2'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'capybara', '~> 1.1.2'
